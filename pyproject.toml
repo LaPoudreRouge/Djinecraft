@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Djinecraft"
+version = "0.1.0"
+description = "A Django-inspired Minecraft datapack preprocessor"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [
+  { name = "Your Name", email = "your.email@example.com" }
+]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.scripts]
+djinecraft = "Djinecraft.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["Djinecraft"]
+
+[tool.setuptools.package-data]
+Djinecraft = [
+  "templates/new_project/manage.py",
+  "templates/new_project/project/*",
+  "templates/new_app/*.py",
+]
